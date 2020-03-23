@@ -136,8 +136,7 @@ function getName(makePersonObject) {
  * passing in [ 'orange', 'grape', 'apple', 'banana', 'mango' ] as the argument,
  * the returned value should be: 2.
 */
-function appleIndex(fruit) {
- return indexOf(Array["apple"]);
+function appleIndex() {
 
 }
 
