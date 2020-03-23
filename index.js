@@ -101,7 +101,12 @@ function temperatureInF(Temp,unitOfMeasure) {
  * }
 */
 function makePersonObject(id, name, email) {
-  return {id, name,email};
+  const personObject = {
+  id:id,
+  name:name,
+  email:email,
+  }
+  return personObject;
 };
 /**
  * ### Challenge `getName`
@@ -116,9 +121,9 @@ function makePersonObject(id, name, email) {
  * passing { id: 1, name: 'Leia', email: 'leia@leia.com` } as the argument,
  * the returned value should look like `Hello, my name is Leia`.
 */
-function getName(makePersonObject) {
-  return "Hello, my name is " + name;
-};
+function getName(person) {
+  return "Hello, my name is " + person.name;
+}
 
 
 /**
@@ -136,8 +141,8 @@ function getName(makePersonObject) {
  * passing in [ 'orange', 'grape', 'apple', 'banana', 'mango' ] as the argument,
  * the returned value should be: 2.
 */
-function appleIndex() {
-
+function appleIndex(fruit) {
+return fruit.indexOf("apple");
 }
 
 /**
@@ -155,9 +160,17 @@ function appleIndex() {
  * passing in [ 'orange', 'apple', 'banana', 'apples', 'apple', 'mango' ] as the argument,
  * the returned value should be: [ false, true, false, false, true, false ].
 */
-function isItAnApple(/* code here */) {
-  /* code here */
-}
+function isItAnApple(fruit) {
+  for(let i = 0 ; i < fruit.length; i++) {
+    let newArray = [];
+    if (fruit[i] === "apple"){
+      return newArray.push(["true"]);
+    }// if
+    else{
+      return newArray.push(["false"]);
+    }// else
+  }// for
+}// function
 
 
 
